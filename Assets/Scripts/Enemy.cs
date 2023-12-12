@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
                 CreateSplit();
                 CreateSplit();
             }
+            FindObjectOfType<GameManager>().EnemyDestroyed(this);
             Destroy(this.gameObject);
         }
     }
