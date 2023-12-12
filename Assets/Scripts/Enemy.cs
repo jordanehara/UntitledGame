@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public Sprite[] sprites;
     private Rigidbody2D _rigidbody;
@@ -28,6 +28,12 @@ public class Asteroid : MonoBehaviour
         this.transform.localScale = Vector3.one * this.size;
 
         _rigidbody.mass = this.size;
+    }
+    
+    public void SetTrajectory(Vector2 direction)
+    {
+        _rigidbody.AddForce(direction * this.speed);
+        Destroy(this.gameObject, this.maxLifetime);
     }
 
 }

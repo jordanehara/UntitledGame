@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5694005202743515792}
   - component: {fileID: 5332880075503193921}
   - component: {fileID: 7250704407709347687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,3 +171,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db79f2ca478811a428f9ff46c4353a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 472593341de8bc3438f571bdd83747eb, type: 3}
+  - {fileID: 21300000, guid: 21646e2d52500f847a12aee22527cef6, type: 3}
+  - {fileID: 21300000, guid: 51723550fa75d754ca299c3db60142d0, type: 3}
+  - {fileID: 21300000, guid: 67c606cc958d0274ebf1756ce8a3de0b, type: 3}
+  size: 1
+  speed: 10
+  maxLifetime: 30
+  minSize: 0.5
+  maxSize: 1.5
