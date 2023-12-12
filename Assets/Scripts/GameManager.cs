@@ -17,7 +17,12 @@ public class GameManager : MonoBehaviour
         this.explosion.transform.position = enemy.transform.position;
         this.explosion.Play();
 
-        // TODO: score increase
+        if (enemy.size < 0.75f)
+            score += 100;
+        else if (enemy.size < 1.2f)
+            score += 50;
+        else
+            score += 25;
     }
 
     public void PlayerDied()
@@ -47,6 +52,9 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        // TODO
+        this.lives = 3;
+        this.score = 0;
+        
+        Invoke(nameof(Respawn), respawnTime);
     }
 }
